@@ -17,10 +17,22 @@ public class Employer {
         this.value = value;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static int getNextId() {
+        return nextId;
+    }
+
+    public static void setNextId(int nextId) {
+        Employer.nextId = nextId;
+    }
     // Custom toString, equals, and hashCode methods:
 
     @Override
     public String toString() {
+
         return value;
     }
 
@@ -34,20 +46,27 @@ public class Employer {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(getId());
     }
 
     // Getters and Setters:
 
     public int getId() {
+
         return id;
     }
 
     public String getValue() {
+
         return value;
     }
 
     public void setValue(String value) {
+
         this.value = value;
     }
+
+
+
 }
