@@ -21,6 +21,7 @@ public class Location {
     }
 
 
+
     // Custom toString, equals, and hashCode methods:
 
     @Override
