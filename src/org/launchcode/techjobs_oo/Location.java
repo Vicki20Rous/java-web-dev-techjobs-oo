@@ -20,6 +20,9 @@ public class Location {
         this.value = value;
     }
 
+    public Location(String desert) {
+        return;
+    }
 
 
     // Custom toString, equals, and hashCode methods:
