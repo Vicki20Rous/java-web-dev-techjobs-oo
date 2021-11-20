@@ -13,18 +13,18 @@ public class JobTest {
 
     public Job jobOne;
     public Job jobTwo;
-    public Job jobThree;
+//    public Job jobThree;
 
     @Before
     public void initialize() {
         jobOne = new Job();
         jobTwo = new Job();
-        jobThree = new Job();
+//        jobThree = new Job();
 
     }
 
     @Test
-    public void testSettingJobId() {
+    public void testSettingJobId_returnTrue() {
         assertEquals(jobOne.getId() + 1, jobTwo.getId());
     }
 
@@ -41,13 +41,13 @@ public class JobTest {
 
         assertEquals("Product tester", jobThree.getName());
         assertTrue(jobThree.getEmployer() instanceof Employer);
-        assertEquals("ACME", jobThree.getEmployer().toString());
+        assertEquals("ACME", jobThree.getEmployer().getValue());
         assertTrue(jobThree.getLocation() instanceof Location);
-        assertEquals("Desert", jobThree.getLocation().toString());
+        assertEquals("Desert", jobThree.getLocation().getValue());
         assertTrue(jobThree.getPositionType() instanceof PositionType);
-        assertEquals("Quality Control", jobThree.getPositionType().toString());
+        assertEquals("Quality Control", jobThree.getPositionType().getValue());
         assertTrue(jobThree.getCoreCompetency() instanceof CoreCompetency);
-        assertEquals("Persistence", jobThree.getCoreCompetency().toString());
+        assertEquals("Persistence", jobThree.getCoreCompetency().getValue());
 
 
     }
