@@ -13,13 +13,13 @@ public class JobTest {
 
     public Job jobOne;
     public Job jobTwo;
-//    public Job jobThree;
+    public Job jobThree;
 
     @Before
     public void initialize() {
         jobOne = new Job();
         jobTwo = new Job();
-//        jobThree = new Job();
+        jobThree = new Job();
 
     }
 
@@ -33,11 +33,9 @@ public class JobTest {
     }
 
 
-
-
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job jobThree = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job jobThree = new Job("Product tester", new Employer("ACME"), new Location ("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
 
         assertEquals("Product tester", jobThree.getName());
         assertTrue(jobThree.getEmployer() instanceof Employer);
